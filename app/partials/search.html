@@ -1,0 +1,17 @@
+<h2> Movie Search</h2>
+<input ng-model='vm.movieLook' />
+<!-- From the controller  -->
+<button ng-click="vm.getmovies(vm.movieLook)"> Search </button>
+<!-- // movieresults came from the controller -->
+<div class="row" style="margin-top: 24px;">
+    <div class="col-xs-4" ng-repeat='data in vm.movieresults'>
+
+
+        <p>{{ data.Title }} </p>
+        <p>{{ data.Year }} </p>
+        <img src="{{data.Poster}}" />
+        <!-- movieDetailId came from the state in ap.js -->
+        <div><a ui-sref="detail({movieDetailId:  '{{data.imdbID}}'  })">Look for More Details</a></div>
+    </div>
+    <!-- <pre>{{vm.movieresults | json}}</pre>  used this for checking the json-->
+    <div class="well" ui-view></div>

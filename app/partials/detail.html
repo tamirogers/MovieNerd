@@ -1,0 +1,16 @@
+
+<h3> A few More Details for You </h3>
+
+<div>
+    <p>{{vm.detailresults.Actors}}</p>
+    <p>{{vm.detailresults.Director}}</p>
+    <p>{{vm.detailresults.Awards}}</p>
+    <p>{{vm.detailresults.Metascore}}</p>
+    <p>{{vm.detailresults.Rated}}</p>
+</div>
+
+<!-- ui-view is used with ui-sref to bind to another page -->
+<div class="well" ui-view> </div> 
+
+<!--  ui-sref jumps you to another state, this would also work with $state $state.go -->
+<div> <a ui-sref="search">back to search</a></div>
